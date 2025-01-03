@@ -1,0 +1,470 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+  <div class="nesmee-hero-section6">
+    <div class="nesmee-hero-slider">
+    {% for banner in banners %}
+      <div class="nesmee-hero-slider-item" style="background-image: url({{banner.image.url}})">
+        <div class="container">
+          <div class="nesmee-hero-content center">
+            <h5>{{banner.sub_title}}</h5>
+            <h1>{{banner.title}}</h1>
+            <div class="nesmee-extra-mt">
+              <a class='nesmee-default-btn ' data-bs-toggle="modal" data-bs-target=".customContactModal" data-text='Know More'><span class="btn-wraper">Know More</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- End section -->
+
+  <!-- End section -->
+
+  <div class="section extra-padding-tb">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <div class="nesmee-iconbox-wrap2">
+            <div class="nesmee-iconbox-icon2">
+              <img src="{% static 'web/assets/images/iconbox/rating.png' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data2">
+              <h5>Worlds Favourite Cardamom</h5>
+              <p>We offer you the finest aromatic cardamom in the world.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="nesmee-iconbox-wrap2">
+            <div class="nesmee-iconbox-icon2">
+              <img src="{% static 'web/assets/images/iconbox/plantation.png' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data2">
+              <h5>From our own Plantation </h5>
+              <p>Experience authentic flavors with fresh produce from    own plantations </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="nesmee-iconbox-wrap2">
+            <div class="nesmee-iconbox-icon2">
+              <img src="{% static 'web/assets/images/iconbox/fresh.png' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data2">
+              <h5>Handpicked Freshness</h5>
+              <p>farm-fresh produce that brings nature's finest to your table</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="container">
+    <div class="nesmee-divider"></div>
+  </div>
+  <!-- End -->
+
+  <div class="section large-padding-tb overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="nesmee-thumb extra-mr">
+            <img data-aos="fade-up" data-aos-duration="600" src="{% static 'web/assets/images/v1/thumb1.png' %}" alt="">
+            <div class="nesmee-thumb-position" data-aos="fade-up" data-aos-duration="800">
+              <img src="{% static 'web/assets/images/v1/thumb2.png' %}" alt="">
+            </div>
+            <div class="nesmee-shape1">
+              <img src="{% static 'web/assets/images/shape/shape1.svg' %}" alt="">
+            </div>
+            <div class="nesmee-shape2">
+              <img src="{% static 'web/assets/images/shape/shape2.svg' %}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-end">
+          <div class="nesmee-default-content ml40">
+            <h2>More than 25+ years we provide IT solutions</h2>
+            <h5>During this time, we’ve built a reputation for excellent clients satisfaction as evidenced by our</h5>
+            <p>Each demo built with Teba will look different. You can customize almost anything in the appearance of your website with only a few clicks. Each demo built with Teba will look different.</p>
+            <div class="nesmee-extra-mt">
+              <a class='nesmee-default-btn' data-text='More About Us' href='about-us.html'><span class="btn-wraper">More About Us</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section bg-light1 nesmee-section-padding2">
+    <div class="container">
+      <div class="nesmee-section-title center">
+        <h2>Our awesome services to give you success</h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
+          <div class="nesmee-iconbox-wrap style-two">
+            <div class="nesmee-iconbox-icon">
+              <img src="{% static 'web/assets/images/iconbox/icon4.svg' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data">
+              <h5>Data Tracking <br> Security</h5>
+              <p>Developing a comprehensive IT strategy that aligns.</p>
+              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
+          <div class="nesmee-iconbox-wrap style-two">
+            <div class="nesmee-iconbox-icon">
+              <img src="{% static 'web/assets/images/iconbox/icon5.svg' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data">
+              <h5>IT Management <br> Service</h5>
+              <p>Developing a comprehensive IT strategy that aligns.</p>
+              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
+          <div class="nesmee-iconbox-wrap style-two">
+            <div class="nesmee-iconbox-icon">
+              <img src="{% static 'web/assets/images/iconbox/icon7.svg' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data">
+              <h5>Web & Mobile App <br> Development</h5>
+              <p>Developing a comprehensive IT strategy that aligns.</p>
+              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
+          <div class="nesmee-iconbox-wrap style-two">
+            <div class="nesmee-iconbox-icon">
+              <img src="{% static 'web/assets/images/iconbox/icon6.svg' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data">
+              <h5>UI/UX & Branding <br> Identity</h5>
+              <p>Developing a comprehensive IT strategy that aligns.</p>
+              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
+          <div class="nesmee-iconbox-wrap style-two">
+            <div class="nesmee-iconbox-icon">
+              <img src="{% static 'web/assets/images/iconbox/icon8.svg' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data">
+              <h5>Digital Marketing <br> Services</h5>
+              <p>Developing a comprehensive IT strategy that aligns.</p>
+              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
+          <div class="nesmee-iconbox-wrap style-two">
+            <div class="nesmee-iconbox-icon">
+              <img src="{% static 'web/assets/images/iconbox/icon9.svg' %}" alt="">
+            </div>
+            <div class="nesmee-iconbox-data">
+              <h5>Cyber Security <br> Solutions</h5>
+              <p>Developing a comprehensive IT strategy that aligns.</p>
+              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section large-padding-tb4 overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-lg-2">
+          <div class="nesmee-thumb extra-ml">
+            <img data-aos="fade-up" data-aos-duration="600" src="{% static 'web/assets/images/v1/thumb3.png' %}" alt="">
+            <div class="nesmee-thumb-position2" data-aos="fade-up" data-aos-duration="800">
+              <img src="{% static 'web/assets/images/v1/thumb4.png' %}" alt="">
+            </div>
+            <div class="nesmee-shape3">
+              <img src="{% static 'web/assets/images/shape/shape3.svg' %}" alt="">
+            </div>
+            <div class="nesmee-shape4">
+              <img src="{% static 'web/assets/images/shape/shape4.svg' %}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-end">
+          <div class="nesmee-default-content mr40">
+            <h2>Discovering the True Flavor of Cardamom</h2>
+            <p>Each demo built with Teba will look different. You can customize almost anything in the appearance of your website with only a few clicks. Each demo built with Teba will look different.</p>
+            <div class="nesmee-extra-mt">
+                <div class="nesmee-iconbox-wrap2">
+                  <div class="nesmee-iconbox-icon2 bg-white">
+                    <img src="{% static 'web/assets/images/iconbox/icon10.svg' %}" alt="">
+                  </div>
+                  <div class="nesmee-iconbox-data2">
+                    <a href="/contact-us">
+                      <h5>Quality Solution for Business</h5>
+                    </a>
+                    <p>Each demo built with Teba will look different. customize almost anything in the appearance of your</p>
+                  </div>
+                </div>
+                <div class="nesmee-iconbox-wrap2">
+                  <div class="nesmee-iconbox-icon2 bg-white">
+                    <img src="{% static 'web/assets/images/iconbox/icon1.svg' %}" alt="">
+                  </div>
+                  <div class="nesmee-iconbox-data2">
+                    <a href="/team">
+                      <h5>Amazing Expert Teams</h5>
+                    </a>
+                    <p>Each demo built with Teba will look different. customize almost anything in the appearance of your</p>
+                  </div>
+                </div>
+                <div class="nesmee-iconbox-wrap2 mb-0">
+                  <div class="nesmee-iconbox-icon2 bg-white">
+                    <img src="{% static 'web/assets/images/iconbox/icon2.svg' %}" alt="">
+                  </div>
+                  <div class="nesmee-iconbox-data2">
+                    <a href="/contact-us">
+                      <h5>Urgent Support For Clients</h5>
+                    </a>
+                    <p>Each demo built with Teba will look different. customize almost anything in the appearance of your</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section nesmee-section-padding bg-light1">
+    <div class="container">
+      <div class="nesmee-section-title center">
+        <h2>Explore our recent projects</h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
+          <div class="nesmee-portfolio-wrap">
+            <div class="nesmee-portfolio-thumb">
+              <img src="{% static 'web/assets/images/p1/p1.png' %}" alt="">
+              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
+                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
+              </a>
+              <div class="nesmee-portfolio-data">
+                <a href='single-portfolio.html'>
+                  <h4>Digital Product Design</h4>
+                </a>
+                <p>Design, Graphics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
+          <div class="nesmee-portfolio-wrap">
+            <div class="nesmee-portfolio-thumb">
+              <img src="{% static 'web/assets/images/p1/p2.png' %}" alt="">
+              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
+                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
+              </a>
+              <div class="nesmee-portfolio-data">
+                <a href='single-portfolio.html'>
+                  <h4>Cyber Security Analysis</h4>
+                </a>
+                <p>Security, Technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
+          <div class="nesmee-portfolio-wrap">
+            <div class="nesmee-portfolio-thumb">
+              <img src="{% static 'web/assets/images/p1/p3.png' %}" alt="">
+              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
+                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
+              </a>
+              <div class="nesmee-portfolio-data">
+                <a href='single-portfolio.html'>
+                  <h4>Health App Development</h4>
+                </a>
+                <p>Development, Software</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
+          <div class="nesmee-portfolio-wrap">
+            <div class="nesmee-portfolio-thumb">
+              <img src="{% static 'web/assets/images/p1/p4.png' %}" alt="">
+              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
+                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
+              </a>
+              <div class="nesmee-portfolio-data">
+                <a href='single-portfolio.html'>
+                  <h4>Marketing Agency Website</h4>
+                </a>
+                <p>Development, Marketing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8" data-aos="fade-up" data-aos-duration="700">
+          <div class="nesmee-portfolio-wrap">
+            <div class="nesmee-portfolio-thumb">
+              <img src="{% static 'web/assets/images/p1/p5.png' %}" alt="">
+              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
+                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
+              </a>
+              <div class="nesmee-portfolio-data">
+                <a href='single-portfolio.html'>
+                  <h4>Project for Marketing</h4>
+                </a>
+                <p>Marketing, Business</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nesmee-center-btn">
+          <a class='nesmee-default-btn' data-text='View Our All Works' href='portfolio-01.html'><span class="btn-wraper">View Our All Works</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section nesmee-section-padding bg-light1">
+    <div class="container">
+      <div class="nesmee-section-title center">
+        <h2>Discover Our Cardamom Products</h2>
+      </div>
+      <div class="nesmee-3column-slider2" data-aos="fade-up" data-aos-duration="800">
+
+        <div class="nesmee-service-box">
+            <div class="nesmee-service-thumb">
+              <img src="{% static 'web/assets/images/v3/service1.png' %}" alt="">
+              <div class="nesmee-service-data">
+                <a>
+                  <h5>IT Management</h5>
+                  <p>IT Management</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        <div class="nesmee-service-box">
+            <div class="nesmee-service-thumb">
+              <img src="{% static 'web/assets/images/v3/service1.png' %}" alt="">
+              <div class="nesmee-service-data">
+                <a>
+                  <h5>IT Management</h5>
+                  <p>IT Management</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nesmee-service-box">
+            <div class="nesmee-service-thumb">
+              <img src="{% static 'web/assets/images/v3/service1.png' %}" alt="">
+              <div class="nesmee-service-data">
+                <a>
+                  <h5>IT Management</h5>
+                  <p>IT Management</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+
+  {% if testimonials %}
+  <div class="section nesmee-section-padding bg-light1">
+    <div class="container">
+      <div class="nesmee-section-title center">
+        <h2>Don't take our word, see what our customers say</h2>
+      </div>
+      <div class="nesmee-2column-slider" data-aos="fade-up" data-aos-duration="600">
+        {% for testimonial in testimonials %}
+        <div class="nesmee-t-box">
+          <div class="nesmee-t-quote">
+            <img src="{% static 'web/assets/images/v1/quote.svg' %}" alt="">
+          </div>
+          <div class="nesmee-t-data">
+            <p>“ {{testimonial.message}} ”</p>
+            <div class="nesmee-t-author">
+              <h5>{{testimonial.name }}</h5>
+              <span>{{testimonial.position}}</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End section -->
+
+  {% if blogs %}
+  <div class="section nesmee-section-padding2">
+    <div class="container">
+      <div class="nesmee-section-title">
+        <div class="row">
+          <div class="col-xxl-5 col-lg-7">
+            <h2>Recent blog & articles</h2>
+          </div>
+          <div class="col-xxl-7 col-lg-5 d-flex align-items-center justify-content-end">
+            <div class="nesmee-title-btn">
+              <a class='nesmee-default-btn' data-text='View All Posts' href='#'><span class="btn-wraper">View All Blogs</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {% for blog in blogs %}
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="600">
+          <div class="nesmee-blog-wrap">
+            <a href='{{blog.get_absolute_url}}'>
+              <div class="nesmee-blog-thumb">
+                <img src="{{blog.image.url}}" alt="{{blog.title}}">
+              </div>
+            </a>
+            <div class="nesmee-blog-content reduced-padding">
+              <div class="nesmee-blog-meta">
+                <ul>
+                {% if blog.category %}
+                  <li><a href='{{blog.get_absolute_url}}'>{{blog.category}}</a></li>
+                {% endif %}
+                  <li><a href='{{blog.get_absolute_url}}'>{{blog.date}}</a></li>
+                </ul>
+              </div>
+              <a href='{{blog.get_absolute_url}}'>
+                <h4>{{blog.title}}</h4>
+              </a>
+              <a class='nesmee-icon-btn' href='{{blog.get_absolute_url}}'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- End section -->
+
+
+  {% endblock  %}

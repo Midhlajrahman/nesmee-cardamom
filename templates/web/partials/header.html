@@ -1,0 +1,108 @@
+{% load static %}
+<header class="site-header nesmee-header-section" id="sticky-menu">
+    <div class="nesmee-header-top bg-light1">
+      <div class="container">
+        <div class="nesmee-header-info-wrap">
+          <div class="nesmee-header-info  dark-color">
+            <ul>
+              <li><i class="ri-map-pin-2-fill"></i>1st Floor, Shaima Tower, Wandoor, Malappuram, 679 328</li>
+            </ul>
+          </div>
+          <div class="nesmee-header-info  dark-color">
+            <ul>
+              <li><a href="tel:123"><i class="ri-phone-fill"></i>+91 7902 8555 54</a></li>
+              <li><a href="mailto:name@email.com"><i class="ri-mail-fill"></i>info@nesmee.in</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nesmee-header-bottom bg-white">
+      <div class="container">
+        <nav class="navbar site-navbar">
+          <!-- Brand Logo-->
+          <div class="brand-logo">
+            <a href='index.html'>
+              <img src="{% static 'web/assets/images/logo/logo.webp' %}" alt="" class="light-version-logo">
+            </a>
+          </div>
+          <div class="menu-block-wrapper">
+            <div class="menu-overlay"></div>
+            <nav class="menu-block" id="append-menu-header">
+              <div class="mobile-menu-head">
+                <div class="go-back">
+                  <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="site-menu-main">
+                <li class="nav-item nav-item-has-children">
+                  <a href="{% url "web:index" %}" class="nav-link-item drop-trigger">Home </a>
+                </li>
+
+                <li class="nav-item nav-item-has-children">
+                    <a href="#" class="nav-link-item drop-trigger">About </a>
+                  </li>
+               
+                <li class="nav-item nav-item-has-children">
+                  <a href="#" class="nav-link-item drop-trigger">Portfolio <i class="ri-arrow-down-s-fill"></i></a>
+                  <ul class="sub-menu shape-none" id="submenu-6">
+                    <li class="sub-menu--item">
+                      <a href='portfolio-01.html'>
+                        <span class="menu-item-text">Portfolio Grid</span>
+                      </a>
+                    </li>
+                    <li class="sub-menu--item">
+                      <a href='portfolio-02.html'>
+                        <span class="menu-item-text">Portfolio masonry</span>
+                      </a>
+                    </li>
+                    <li class="sub-menu--item">
+                      <a href='single-portfolio.html'>
+                        <span class="menu-item-text">Single Portfolio</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="#" class="nav-link-item drop-trigger">Blog <i class="ri-arrow-down-s-fill"></i></a>
+                  <ul class="sub-menu" id="submenu-9">
+                    <li class="sub-menu--item">
+                      <a href='blog.html'>
+                        <span class="menu-item-text">blog</span>
+                      </a>
+                    </li>
+                    <li class="sub-menu--item">
+                      <a href='blog-grid.html'>
+                        <span class="menu-item-text">Blog grid</span>
+                      </a>
+                    </li>
+                    <li class="sub-menu--item">
+                      <a href='single-blog.html'>
+                        <span class="menu-item-text">blog Details</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class='nav-link-item' href='contact-us.html'>Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
+            <div class="nesmee-header-icon">
+              
+              <a class='nesmee-default-btn nesmee-header-btn' data-bs-toggle="modal" data-bs-target=".customContactModal" data-text='Get in Touch'><span class="btn-wraper">Get in Touch</span></a>
+            </div>
+          </div>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+          <!--/.Mobile Menu Hamburger Ends-->
+        </nav>
+      </div>
+    </div>
+  </header>

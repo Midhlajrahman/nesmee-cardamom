@@ -1,0 +1,55 @@
+.modal .nesmee-main-form{
+    padding: 30px !important;
+}
+
+.form-control {
+    background: transparent !important;
+}
+
+.modal input, input[type='date'], input[type='email'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], textarea {
+    padding: 15px !important;
+}
+
+.nesmee-breadcrumb{
+    padding: 200px 0 80px !important;
+    
+}
+.nesmee-breadcrumb .post__title {
+    font-size: 40px !important;
+}
+
+.blog-single-section .nesmee-blog-thumb img{
+    border-radius: 10px !important;
+}
+
+.nesmee-recent-post-data p{
+    font-size: 15px !important;
+    line-height: 24px !important;
+}
+
+.nesmee-hero-content.center{
+    max-width: 1100px !important;
+}
+
+.nesmee-hero-content h1{
+    font-size: 60px !important;
+    line-height: 5rem !important;
+}
+
+.nesmee-iconbox-wrap2 .nesmee-iconbox-icon2 img{
+    height: 55px !important;
+}
+
+.nesmee-service-thumb:after {
+    background: linear-gradient(180deg, rgba(43, 77, 255, 0) 0, #12121194 100%) !important;
+}
+
+.nesmee-service-thumb:before{
+    background: linear-gradient(180deg, rgba(4, 13, 67, 0) 52.38%, #161616 91.91%) !important;  
+}
+.nesmee-service-data{
+    background: white;
+}
+.nesmee-service-data h5{
+    color: black !important ;
+}

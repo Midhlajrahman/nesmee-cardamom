@@ -13,11 +13,6 @@
     .gallery-item .image img {
         border-radius: 10px 10px 0px 0px !important;
     }
-    
-    .gallery-item.style-two .content h5 a {
-        font-size: 20px !important;
-    }
-
     .blog-item .image img{
         height: 250px;
         width: 100%;
@@ -87,4 +82,8 @@ border-radius: 10px !important;
 
 .gallery-item .image img {
     border-radius: 10px 10px 0px 0px !important;
+}
+
+.gallery-item.style-two .content h5 a {
+    font-size: 20px !important;
 }

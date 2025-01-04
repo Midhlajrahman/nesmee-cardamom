@@ -1,152 +1,172 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<html lang="zxx">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nesmee - IT Solution & Technology Theme</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.ico' %}" type="image/x-icon">
-  <link rel="icon" href="{% static 'web/assets/images/favicon.ico' %}" type="image/x-icon">
-  <!--- End favicon-->
+    <!-- Title -->
+    <title>Nesmee Cardamom | Premium, Sustainable & Health-Boosting Cardamom</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="{% static 'web/assets/images/logos/logo.png' %}" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="{% static 'web/fonts.googleapis.com/css2a707.css' %}" rel="stylesheet">
+    
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/flaticon.min.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/fontawesome-5.14.0.min.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/bootstrap.min.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/magnific-popup.min.css' %}">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/nice-select.min.css' %}">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/aos.css' %}">
+    <!-- Slick -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/slick.min.css' %}">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{% static 'web/assets/css/style.css' %}">
 
-  <link href="{% static 'web/fonts.googleapis.com/css2e409.css' %}" rel="stylesheet">
-  <!-- End google font  -->
-
-  <link rel="stylesheet" href="{% static 'web/assets/css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/magnific-popup.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/slick.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/fontawesome.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/remixicon.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/aos.css' %}">
-
-
-  <!-- Code Editor  -->
-
-  <link rel="stylesheet" href="{% static 'web/assets/css/main.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/custom.css' %}">
-  <link rel="stylesheet" href="{% static 'web/assets/css/app.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/assets/css/custom.css' %}">
+    
 </head>
-
 <body>
+    <div class="page-wrapper">
 
-  <div class="nesmee-preloader-wrap">
-    <div class="nesmee-preloader">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+        <!-- Preloader -->
+        <div class="preloader"><div class="custom-loader"></div></div>
+
+        {% include "web/partials/header.html" %}
+       
+
+        <!--Form Back Drop-->
+        <div class="form-back-drop"></div>
+        
+        <!-- Hidden Sidebar -->
+        <section class="hidden-bar">
+            <div class="inner-box text-center">
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+                <div class="title">
+                    <h4>Enquiry Form</h4>
+                </div>
+
+                <!--Appointment Form-->
+                <div class="appointment-form">
+                    <form id="appointmentForm" method="post" action="{% url 'web:pop_contact' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{form.name}}
+                        </div>
+                        <div class="form-group">
+                            {{form.email}}
+                        </div>
+                        <div class="form-group">
+                            {{form.number}}
+                        </div>
+                        <div class="form-group">
+                            {{form.subject}}
+                        </div>
+                        <div class="form-group">
+                            {{form.message}}
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="theme-btn style-two">Submit now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--End Hidden Sidebar -->
+
+            {% block content %}
+
+            {% endblock  %}
+
+        
+      {% include "web/partials/footer.html" %}
+
+      <!-- Scroll Top Button -->
+      {% comment %} <button class="scroll-top scroll-to-target" data-target="html"><span class="far fa-angle-double-up"></span></button> {% endcomment %}
   </div>
-  <!-- End preloader -->
+  <!--End pagewrapper-->
 
-  <!-- progress circle -->
-  <div class="paginacontainer">
-    <div class="progress-wrap">
-      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
-      <div class="top-arrow">
-        <i class="ri-arrow-up-s-line"></i>
-      </div>
-    </div>
-  </div>
-
- {% include "web/partials/header.html" %}
-
-  <div class="nesmee-header-search-section">
-    <div class="container">
-      <div class="nesmee-header-search-box">
-        <input type="search" placeholder="Search here...">
-        <button id="header-search" type="button"><i class="ri-search-line"></i></button>
-        <p>Type above and press Enter to search. Press Close to cancel.</p>
-      </div>
-    </div>
-    <div class="nesmee-header-search-close">
-      <i class="ri-close-line"></i>
-    </div>
-  </div>
-  <div class="search-overlay"></div>
-  <!--End landex-header-section -->
-
-{% block content %}
-
-{% endblock  %}
-
-
-<!-- Modal -->
-<!-- Custom Modal -->
-<div class="modal fade customContactModal" tabindex="-1" aria-labelledby="customContactModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content bg-light1">
-        <div class="modal-body position-relative">
-          <!-- Close Button in the Top-Right -->
   
-          <div class="nesmee-main-form bg-light1" data-aos="fade-up" data-aos-duration="800">
-          <a type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></a>
+  <!-- Jquery -->
+  <script src="{% static 'web/assets/js/jquery-3.6.0.min.js' %}"></script>
 
-            <h3 class="modal-title fs-5" id="customContactModalLabel">Fill The Contact Form</h3>
-            <p>Feel free to contact with us, we don’t spam your email</p>
-            <form action="#">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="nesmee-main-field">
-                    <input type="text" placeholder="Your name" class="form-control">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="nesmee-main-field">
-                    <input type="number" placeholder="Phone number" class="form-control">
-                  </div>
-                </div>
-                <div class="col-lg-12 mt-3">
-                  <div class="nesmee-main-field">
-                    <input type="email" placeholder="Email address" class="form-control">
-                  </div>
-                </div>
-                <div class="col-lg-12 mt-3">
-                  <div class="nesmee-main-field">
-                    <textarea name="textarea" placeholder="Write your message" class="form-control"></textarea>
-                  </div>
-                </div>
-                <div class="col-lg-12 mt-4 text-center">
-                  <button id="nesmee-main-form-btn" type="button" data-text="Send Message" class="btn btn-primary">
-                    <span class="btn-wraper">Send Message</span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Bootstrap -->
+  <script src="{% static 'web/assets/js/bootstrap.min.js' %}"></script>
+  <!-- Appear Js -->
+  <script src="{% static 'web/assets/js/appear.min.js' %}"></script>
+  <!-- Slick -->
+  <script src="{% static 'web/assets/js/slick.min.js' %}"></script>
+  <!-- Magnific Popup -->
+  <script src="{% static 'web/assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <!-- Nice Select -->
+  <script src="{% static 'web/assets/js/jquery.nice-select.min.js' %}"></script>
+  <!-- Image Loader -->
+  <script src="{% static 'web/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+  <!-- Circle Progress -->
+  <script src="{% static 'web/assets/js/circle-progress.min.js' %}"></script>
+  <!-- Isotope -->
+  <script src="{% static 'web/assets/js/isotope.pkgd.min.js' %}"></script>
+  <!--  Aos Animation -->
+  <script src="{% static 'web/assets/js/aos.js' %}"></script>
+  <!-- Custom script -->
+  <script src="{% static 'web/assets/js/script.js' %}"></script>
   
-  
-{% include "web/partials/footer.html" %}
+  <script>
+    $(document).ready(function () {
+        $('#appointmentForm').on('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
 
-<!-- scripts -->
-<script src="{% static 'web/assets/js/jquery-3.7.1.min.js' %}"></script>
-<script src="{% static 'web/assets/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'web/assets/js/menu/menu.js' %}"></script>
-<script src="{% static 'web/assets/js/jquery.magnific-popup.min.js' %}"></script>
-<script src="{% static 'web/assets/js/slick.js' %}"></script>
-<script src="{% static 'web/assets/js/countdown.js' %}"></script>
-<script src="{% static 'web/assets/js/skillbar.js' %}"></script>
-<script src="{% static 'web/assets/js/slick-animation.js' %}"></script>
-<script src="{% static 'web/assets/js/slick-animation.min.js' %}"></script>
-<script src="{% static 'web/assets/js/faq.js' %}"></script>
-<script src="{% static 'web/assets/js/isotope.pkgd.min.js' %}"></script>
-<script src="{% static 'web/assets/js/tabs-slider.js' %}"></script>
-<script src="{% static 'web/assets/js/product-increment.js' %}"></script>
-<script src="{% static 'web/assets/js/top-to-bottom.js' %}"></script>
-<script src="{% static 'web/assets/js/aos.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
-
-<script src="{% static 'web/assets/js/app.js' %}"></script>
-
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                success: function (response) {
+                    if (response.status === 'success') {
+                        // Show SweetAlert for success
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Form Submitted Successfully',
+                            text: 'Thank you for contacting us. We will get back to you soon!',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // Redirect to WhatsApp URL
+                                window.location.href = response.whatsapp_url;
+                            }
+                        });
+                    } else {
+                        // Show SweetAlert for error
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Submission Failed',
+                            text: 'Something went wrong. Please try again later.',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                },
+                error: function () {
+                    // Show SweetAlert for AJAX error
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Unable to process your request at the moment.',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

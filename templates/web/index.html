@@ -1,470 +1,529 @@
 {% extends "web/base.html" %}
 {% load static %}
 {% block content %}
-
-  <div class="nesmee-hero-section6">
-    <div class="nesmee-hero-slider">
-    {% for banner in banners %}
-      <div class="nesmee-hero-slider-item" style="background-image: url({{banner.image.url}})">
+       
+        
+        <!-- Slider Section Start -->
+        <section class="main-slider-area bgc-lighter py-80 rel z-1">
+            <div class="container container-1550">
+                <div class="main-slider-active">
+                    {% for banner in banners %}
+                    <div class="slider-item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5">
+                                <div class="slide-content" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
+                                    <span class="sub-title">{{banner.sub_title}}</span>
+                                    <h1>{{banner.title}}</h1>
+                                    <p>{{banner.descripton}}</p>
+                                    <div class="slider-btns">
+                                        <a class="theme-btn menu-sidebar">Know More <i class="far fa-angle-double-right "></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="50">
+                                <div class="slide-image">
+                                    <img src="{{banner.image.url}}" alt="Slider">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="dot-wrap">
+                <div class="container container-1550 rel">
+                    <div class="main-slider-dots"></div>
+                </div>
+            </div>
+            {% comment %} <div class="slider-shapes">
+                <div class="shape one">
+                    <img src="{% static 'web/assets/images/shapes/leaf.png' %}" alt="Leaf">
+                </div>
+            </div> {% endcomment %}
+        </section>
+        <!-- Slider Section End -->
+        
+        
+       <!-- Why Choose Us Area start -->
+       <section class="why-choose-us-area pt-130 rpt-100 pb-75 rpb-45 rel z-1" id="about">
         <div class="container">
-          <div class="nesmee-hero-content center">
-            <h5>{{banner.sub_title}}</h5>
-            <h1>{{banner.title}}</h1>
-            <div class="nesmee-extra-mt">
-              <a class='nesmee-default-btn ' data-bs-toggle="modal" data-bs-target=".customContactModal" data-text='Know More'><span class="btn-wraper">Know More</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <!-- End section -->
-
-  <!-- End section -->
-
-  <div class="section extra-padding-tb">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-4 col-md-6">
-          <div class="nesmee-iconbox-wrap2">
-            <div class="nesmee-iconbox-icon2">
-              <img src="{% static 'web/assets/images/iconbox/rating.png' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data2">
-              <h5>Worlds Favourite Cardamom</h5>
-              <p>We offer you the finest aromatic cardamom in the world.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-          <div class="nesmee-iconbox-wrap2">
-            <div class="nesmee-iconbox-icon2">
-              <img src="{% static 'web/assets/images/iconbox/plantation.png' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data2">
-              <h5>From our own Plantation </h5>
-              <p>Experience authentic flavors with fresh produce from    own plantations </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-          <div class="nesmee-iconbox-wrap2">
-            <div class="nesmee-iconbox-icon2">
-              <img src="{% static 'web/assets/images/iconbox/fresh.png' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data2">
-              <h5>Handpicked Freshness</h5>
-              <p>farm-fresh produce that brings nature's finest to your table</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End section -->
-
-  <div class="container">
-    <div class="nesmee-divider"></div>
-  </div>
-  <!-- End -->
-
-  <div class="section large-padding-tb overflow-hidden">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="nesmee-thumb extra-mr">
-            <img data-aos="fade-up" data-aos-duration="600" src="{% static 'web/assets/images/v1/thumb1.png' %}" alt="">
-            <div class="nesmee-thumb-position" data-aos="fade-up" data-aos-duration="800">
-              <img src="{% static 'web/assets/images/v1/thumb2.png' %}" alt="">
-            </div>
-            <div class="nesmee-shape1">
-              <img src="{% static 'web/assets/images/shape/shape1.svg' %}" alt="">
-            </div>
-            <div class="nesmee-shape2">
-              <img src="{% static 'web/assets/images/shape/shape2.svg' %}" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 d-flex align-items-end">
-          <div class="nesmee-default-content ml40">
-            <h2>More than 25+ years we provide IT solutions</h2>
-            <h5>During this time, we’ve built a reputation for excellent clients satisfaction as evidenced by our</h5>
-            <p>Each demo built with Teba will look different. You can customize almost anything in the appearance of your website with only a few clicks. Each demo built with Teba will look different.</p>
-            <div class="nesmee-extra-mt">
-              <a class='nesmee-default-btn' data-text='More About Us' href='about-us.html'><span class="btn-wraper">More About Us</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End section -->
-
-  <div class="section bg-light1 nesmee-section-padding2">
-    <div class="container">
-      <div class="nesmee-section-title center">
-        <h2>Our awesome services to give you success</h2>
-      </div>
-      <div class="row">
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
-          <div class="nesmee-iconbox-wrap style-two">
-            <div class="nesmee-iconbox-icon">
-              <img src="{% static 'web/assets/images/iconbox/icon4.svg' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data">
-              <h5>Data Tracking <br> Security</h5>
-              <p>Developing a comprehensive IT strategy that aligns.</p>
-              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
-          <div class="nesmee-iconbox-wrap style-two">
-            <div class="nesmee-iconbox-icon">
-              <img src="{% static 'web/assets/images/iconbox/icon5.svg' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data">
-              <h5>IT Management <br> Service</h5>
-              <p>Developing a comprehensive IT strategy that aligns.</p>
-              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
-          <div class="nesmee-iconbox-wrap style-two">
-            <div class="nesmee-iconbox-icon">
-              <img src="{% static 'web/assets/images/iconbox/icon7.svg' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data">
-              <h5>Web & Mobile App <br> Development</h5>
-              <p>Developing a comprehensive IT strategy that aligns.</p>
-              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
-          <div class="nesmee-iconbox-wrap style-two">
-            <div class="nesmee-iconbox-icon">
-              <img src="{% static 'web/assets/images/iconbox/icon6.svg' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data">
-              <h5>UI/UX & Branding <br> Identity</h5>
-              <p>Developing a comprehensive IT strategy that aligns.</p>
-              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
-          <div class="nesmee-iconbox-wrap style-two">
-            <div class="nesmee-iconbox-icon">
-              <img src="{% static 'web/assets/images/iconbox/icon8.svg' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data">
-              <h5>Digital Marketing <br> Services</h5>
-              <p>Developing a comprehensive IT strategy that aligns.</p>
-              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
-          <div class="nesmee-iconbox-wrap style-two">
-            <div class="nesmee-iconbox-icon">
-              <img src="{% static 'web/assets/images/iconbox/icon9.svg' %}" alt="">
-            </div>
-            <div class="nesmee-iconbox-data">
-              <h5>Cyber Security <br> Solutions</h5>
-              <p>Developing a comprehensive IT strategy that aligns.</p>
-              <a class='nesmee-icon-btn' href='/single-service'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End section -->
-
-  <div class="section large-padding-tb4 overflow-hidden">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 order-lg-2">
-          <div class="nesmee-thumb extra-ml">
-            <img data-aos="fade-up" data-aos-duration="600" src="{% static 'web/assets/images/v1/thumb3.png' %}" alt="">
-            <div class="nesmee-thumb-position2" data-aos="fade-up" data-aos-duration="800">
-              <img src="{% static 'web/assets/images/v1/thumb4.png' %}" alt="">
-            </div>
-            <div class="nesmee-shape3">
-              <img src="{% static 'web/assets/images/shape/shape3.svg' %}" alt="">
-            </div>
-            <div class="nesmee-shape4">
-              <img src="{% static 'web/assets/images/shape/shape4.svg' %}" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 d-flex align-items-end">
-          <div class="nesmee-default-content mr40">
-            <h2>Discovering the True Flavor of Cardamom</h2>
-            <p>Each demo built with Teba will look different. You can customize almost anything in the appearance of your website with only a few clicks. Each demo built with Teba will look different.</p>
-            <div class="nesmee-extra-mt">
-                <div class="nesmee-iconbox-wrap2">
-                  <div class="nesmee-iconbox-icon2 bg-white">
-                    <img src="{% static 'web/assets/images/iconbox/icon10.svg' %}" alt="">
-                  </div>
-                  <div class="nesmee-iconbox-data2">
-                    <a href="/contact-us">
-                      <h5>Quality Solution for Business</h5>
-                    </a>
-                    <p>Each demo built with Teba will look different. customize almost anything in the appearance of your</p>
-                  </div>
+            <div class="row align-items-center align-items-xl-start">
+                <div class="col-lg-6">
+                    <div class="what-we-do-image mb-55" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
+                        <div class="about-image-two">
+                            <img class="about-main-image" src="{% static 'web/assets/images/about/about.jpeg' %}" alt="about-us">
+                            <div class="rounded-text rotating">
+                              <svg viewBox="0 0 200 200">
+                                <path id="textPath" d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0" transform="translate(100,100)" fill="none" stroke-width="0"></path>
+                                <g font-size="20.8px">
+                                  <text text-anchor="start">
+                                    <textPath class="coloring" xlink:href="#textPath" startOffset="0%">Best Cardamom in the World. 100% Natural and Pure</textPath>
+                                  </text>
+                                </g>
+                              </svg>
+                              <div class="icon"><img src="{% static 'web/assets/images/icons/cardamom-icon.png' %}" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="nesmee-iconbox-wrap2">
-                  <div class="nesmee-iconbox-icon2 bg-white">
-                    <img src="{% static 'web/assets/images/iconbox/icon1.svg' %}" alt="">
-                  </div>
-                  <div class="nesmee-iconbox-data2">
-                    <a href="/team">
-                      <h5>Amazing Expert Teams</h5>
-                    </a>
-                    <p>Each demo built with Teba will look different. customize almost anything in the appearance of your</p>
-                  </div>
+                <div class="col-lg-6">
+                    <div class="why-choose-us-content mb-10" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="50">
+                        <div class="section-title mb-20">
+                            <span class="sub-title mb-20"><i class="fas fa-circle"></i> About Us</span>
+                            <h2>Discover the Essence of Nesmee Cardamom</h2>
+                        </div>
+                        <p>Welcome to Nesmee Cardamom, your trusted source for premium cardamom. Sourced sustainably from lush plantations, our cardamom is handpicked to ensure freshness and quality. We are committed to promoting health and wellness by offering a product known for its digestive and heart health benefits. At Nesmee Cardamom, we believe in supporting local farmers and the planet while bringing you a spice that enhances both your culinary creations and your well-being. Join us in embracing the natural goodness of cardamom.</p>
+                        
+                    </div>
                 </div>
-                <div class="nesmee-iconbox-wrap2 mb-0">
-                  <div class="nesmee-iconbox-icon2 bg-white">
-                    <img src="{% static 'web/assets/images/iconbox/icon2.svg' %}" alt="">
-                  </div>
-                  <div class="nesmee-iconbox-data2">
-                    <a href="/contact-us">
-                      <h5>Urgent Support For Clients</h5>
-                    </a>
-                    <p>Each demo built with Teba will look different. customize almost anything in the appearance of your</p>
-                  </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Area end -->
+        
+        
+        <!-- Features Area start -->
+        <section class="features-area rel z-2">
+            <div class="container">
+                <div class="features-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <i class="flaticon-reliability"></i>
+                                </div>
+                                <h5><a href="service-details.html"> Worlds Favourite Cardamom</a></h5>
+                                <p>We offer you the finest aromatic cardamom in the world.</p>
+                                <div class="bg">
+                                    <img src="{% static 'web/assets/images/services/feature-bg.png' %}" alt="BG">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <i class="flaticon-harvest"></i>
+                                </div>
+                                <h5><a href="service-details.html">From our own Plantation</a></h5>
+                                <p>Experience authentic flavors with fresh produce from own plantations</p>
+                                <div class="bg">
+                                    <img src="{% static 'web/assets/images/services/feature-bg.png' %}" alt="BG">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <i class="flaticon-planting"></i>
+                                </div>
+                                <h5><a href="service-details.html">Handpicked Freshness</a></h5>
+                                <p>farm-fresh produce that brings nature's finest to your table</p>
+                                <div class="bg">
+                                    <img src="{% static 'web/assets/images/services/feature-bg.png' %}" alt="BG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          </div>
+            </div>
+        </section>
+        <!-- Features Area end -->
+        
+        {% if benefits %}
+        <!-- Services Area start -->
+        <section class="services-area pt-100 pb-70 rel z-1" id="benefits">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section-title text-center mb-40" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
+                            <span class="sub-title mb-20"><i class="fas fa-circle"></i> Health Benefits</span>
+                            <h2>Discover the Powerful Health Benefits</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    {% for benefit in benefits %}
+                    <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                        <div class="service-item style-two">
+                            <div class="icon">
+                                <img src="{{benefit.icon.url}}" alt="">
+                            </div>
+                            <h6><a href="service-details.html">{{benefit.title}}</a></h6>
+                            <p>{{benefit.description}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="service-section-bg d-flex justify-content-center align-items-end">
+                {% comment %} <div class="shape one"><img src="{% static 'web/assets/images/shapes/leaf.png' %}" alt="Leaf"></div> {% endcomment %}
+                {% comment %} <div class="shape two"><img src="{% static 'web/assets/images/shapes/leaf.png' %}" alt="Leaf"></div> {% endcomment %}
+                <div class="bg text-center">
+                    <img src="{% static 'web/assets/images/background/service-bg-circle.png' %}" alt="BG Circle">
+                </div>
+            </div>
+        </section>
+        <!-- Services Area end -->
+        {% endif %}
+        
+         <!-- Protfolio Gallery Start -->
+         <section class="portfolio-gallery-area py-130 rpy-100 rel z-1" id="products">
+            <div class="container">
+                <div class="row justify-content-between pb-30 align-items-end">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="50">
+                        <div class="section-title mb-25">
+                           <span class="sub-title mb-20"><i class="fas fa-circle"></i> Products</span>
+                            <h2>Discover Our Cardamom Products</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row gallery-active">
+                    {% for product in products %}
+                    <div class="col-xxl-3 col-lg-3 col-sm-6 item vegetables meat">
+                        <div class="gallery-item style-two">
+                            <div class="image">
+                                <img src="{{product.image.url}}" alt="{{product.title}}">
+                            </div>
+                            <div class="content menu-sidebar">
+                                <h5><a href="{{product.get_absolute_url}}">{{product.title}}</a></h5>
+                                <a class="details-btn r"><i class="far fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% comment %} <div class="gallery-more-btn mt-30 text-center">
+                    <a href="{{product.get_absolute_url}}" class="theme-btn style-three ">View More <i class="far fa-angle-double-right"></i></a>
+                </div> {% endcomment %}
+            </div>
+        </section>
+        <!-- Protfolio Gallery End -->
+        
+        
+        <!-- Benefit Area start -->
+        <section class="benefit-area pb-75 rpb-50 rel z-1" id="why_choose">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
+                       <div class="benefit-image mb-55">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="image">
+                                        <img src="{% static 'web/assets/images/about/cardamom-3.png' %}" alt="Benefit">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="image">
+                                        <img src="{% static 'web/assets/images/about/cardamom-1.png' %}" alt="Benefit">
+                                    </div>
+                                    <div class="image">
+                                        <img src="{% static 'web/assets/images/about/cardamom-2.png' %}" alt="Benefit">
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %} <div class="benefit-leaf">
+                                <img src="{% static 'web/assets/images/about/benefit-leaf.png' %}" alt="Leaf">
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="col-xl-7" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="50">
+                        <div class="benefit-content">
+                            <div class="section-title mb-35">
+                                <span class="sub-title mb-20"><i class="fas fa-circle"></i> Why Choose</span>
+                                <h2>Why Nesmee Cardamom Stands Out</h2>
+                                <p>At Nesmee Cardamom, we offer more than just a spice; we provide a premium product that enhances both your health and your culinary experiences. With a focus on quality, sustainability, and freshness, our cardamom is carefully sourced and handpicked to ensure that you get the best.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="service-item style-three">
+                                        <div class="icon">
+                                            <img src="{% static 'web/assets/images/icons/sustainably.png' %}" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h5><a>Sustainably Sourced</a></h5>
+                                            <p>We partner with local farmers practicing eco-friendly methods, ensuring sustainability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item style-three">
+                                        <div class="icon">
+                                            <img src="{% static 'web/assets/images/icons/premium.png' %}" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h5><a>Premium Quality</a></h5>
+                                            <p>Our cardamom is handpicked for superior freshness and taste.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item style-three">
+                                        <div class="icon">
+                                           <img src="{% static 'web/assets/images/icons/health.png' %}" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h5><a >Health Benefits</a></h5>
+                                            <p>Rich in antioxidants, it supports digestion and heart health.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item style-three">
+                                        <div class="icon">
+                                            <img src="{% static 'web/assets/images/icons/control.png' %}" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h5><a >Traceability</a></h5>
+                                            <p>Each batch is traceable from farm to table, ensuring transparency and authenticity.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefit Area end -->
+        
+        
+        <!-- Fact Counter Area start -->
+        <div class="fact-counter-area pt-65 pb-5 bgc-primary" style="background-image: url({% static 'web/assets/images/background/fact-counter.png' %});">
+            <div class="container">
+               <div class="row text-white justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item style-two counter-text-wrap" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="icon">
+                                <i class="flaticon-planting"></i>
+                            </div>
+                            <div class="content">
+                                <span class="count-text plus" data-speed="3000" data-stop="10">0</span>
+                                <span class="counter-title">Years of Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item style-two counter-text-wrap" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="icon">
+                                <i class="flaticon-customer-loyalty"></i>
+                            </div>
+                            <div class="content">
+                                <span class="count-text plus" data-speed="3000" data-stop="1000">0</span>
+                                <span class="counter-title">Happy Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item style-two counter-text-wrap" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="icon">
+                                <i class="flaticon-team"></i>
+                            </div>
+                            <div class="content">
+                                <span class="count-text plus" data-speed="3000" data-stop="50">0</span>
+                                <span class="counter-title">Experience Team</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item style-two counter-text-wrap" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="icon">
+                                <i class="flaticon-shopping-cart"></i>
+                            </div>
+                            <div class="content">
+                                <span class="count-text plus" data-speed="3000" data-stop="1000">0</span>
+                                <span class="counter-title">Tons Produced</span>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- End section -->
-
-  <div class="section nesmee-section-padding bg-light1">
-    <div class="container">
-      <div class="nesmee-section-title center">
-        <h2>Explore our recent projects</h2>
-      </div>
-      <div class="row">
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
-          <div class="nesmee-portfolio-wrap">
-            <div class="nesmee-portfolio-thumb">
-              <img src="{% static 'web/assets/images/p1/p1.png' %}" alt="">
-              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
-                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
-              </a>
-              <div class="nesmee-portfolio-data">
-                <a href='single-portfolio.html'>
-                  <h4>Digital Product Design</h4>
-                </a>
-                <p>Design, Graphics</p>
-              </div>
+        <!-- Fact Counter Area end -->
+        
+        
+        <!-- Faqs Area start -->
+        <section class="faqs-area pt-130 rpt-100 rel z-1" id="faq">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
+                        <div class="faq-content mb-30 rmb-65">
+                            <div class="section-title mb-35">
+                                <span class="sub-title mb-20"><i class="fas fa-circle"></i> Faqs</span>
+                                <h2>Frequently Asked Questions</h2>
+                            </div>
+                            <div class="accordion" id="faq-accordion">
+                                {% for faq in faqs %}
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}">
+                                           {{ faq.question }}
+                                        </button>
+                                    </h5>
+                                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <p>{{ faq.answer }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="50">
+                       <div class="faq-images">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="image">
+                                        <img src="{% static 'web/assets/images/faqs/faq-1.png' %}" alt="FAQs">
+                                    </div>
+                                    {% comment %} <div class="image leaf">
+                                        <img src="{% static 'web/assets/images/faqs/faq2.png' %}" alt="FAQs">
+                                    </div> {% endcomment %}
+                                </div>
+                                <div class="col-6">
+                                    <div class="image circle">
+                                        <img src="{% static 'web/assets/images/faqs/faq-2.png' %}" alt="FAQs">
+                                    </div>
+                                    <div class="image circle">
+                                        <img src="{% static 'web/assets/images/faqs/faq-3.png' %}" alt="FAQs">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+        <!-- Faqs Area end -->
+        
+        
+    {% if testimonials %}
+      <!-- Testimonials Area start -->
+      <section class="testimonials-area-two pb-75 rpb-45 rel z-1" id="testimonials">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-7">
+                   <div class="testimonials-two-wrap mb-55">
+                        <div class="section-title mb-50">
+                            <span class="sub-title mb-20"><i class="fas fa-circle"></i> Testimonials</span>
+                            <h2>What Our Customer Say  About Our Products</h2>
+                        </div>
+                        <div class="testimonials-slider">
+                            {% for testimonial in testimonials %}
+                            <div class="testimonial-item-two">
+                                <div class="icon"><i class="flaticon-quote"></i></div>
+                                <div class="text">{{testimonial.content}}</div>
+                                <div class="testi-footer">
+                                    {% if testimonial.image %}
+                                    <img src="{{testimonial.image.url}}" alt="{{testimonial.name}}">
+                                    {% endif %}
+                                    <div class="author">
+                                        <h6>{{testimonial.name}}</h6>
+                                        <span class="designation">{{testimonial.position}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="testimonials-arrow pt-25 rpt-10">
+                            <button class="testi-prev"><i class="far fa-arrow-left"></i></button>
+                            <button class="testi-next"><i class="far fa-arrow-right"></i></button>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-xl-5">
+                   <div class="testimonials-image-two mb-55">
+                        <img src="{% static 'web/assets/images/testimonials/testimonial-img.png' %}" alt="Testimonials">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
-          <div class="nesmee-portfolio-wrap">
-            <div class="nesmee-portfolio-thumb">
-              <img src="{% static 'web/assets/images/p1/p2.png' %}" alt="">
-              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
-                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
-              </a>
-              <div class="nesmee-portfolio-data">
-                <a href='single-portfolio.html'>
-                  <h4>Cyber Security Analysis</h4>
-                </a>
-                <p>Security, Technology</p>
-              </div>
+    </section>
+    <!-- Testimonials Area end -->
+    {% endif %}
+
+        
+        {% comment %} <!-- Client Logos Area Start -->
+        <div class="client-logo-area bgc-secondary bgp-top pt-60 pb-20" style="background-image: url({% static 'web/assets/images/background/client-bg-shapes.png' %});">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-2 col-lg-3 col-sm-4 col-6">
+                        <div class="client-logo-item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50">
+                            <a href="#"><img src="{% static 'web/assets/images/client-logos/client-logo1.png' %}" alt="Client Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4 col-6">
+                        <div class="client-logo-item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="50">
+                            <a href="#"><img src="{% static 'web/assets/images/client-logos/client-logo2.png' %}" alt="Client Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4 col-6">
+                        <div class="client-logo-item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="100">
+                            <a href="#"><img src="{% static 'web/assets/images/client-logos/client-logo3.png' %}" alt="Client Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4 col-6">
+                        <div class="client-logo-item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="150">
+                            <a href="#"><img src="{% static 'web/assets/images/client-logos/client-logo4.png' %}" alt="Client Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4 col-6">
+                        <div class="client-logo-item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="200">
+                            <a href="#"><img src="{% static 'web/assets/images/client-logos/client-logo5.png' %}" alt="Client Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-sm-4 col-6">
+                        <div class="client-logo-item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="250">
+                            <a href="#"><img src="{% static 'web/assets/images/client-logos/client-logo6.png' %}" alt="Client Logo"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
-          <div class="nesmee-portfolio-wrap">
-            <div class="nesmee-portfolio-thumb">
-              <img src="{% static 'web/assets/images/p1/p3.png' %}" alt="">
-              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
-                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
-              </a>
-              <div class="nesmee-portfolio-data">
-                <a href='single-portfolio.html'>
-                  <h4>Health App Development</h4>
-                </a>
-                <p>Development, Software</p>
-              </div>
+        <!-- Client Logos Area End --> {% endcomment %}
+        
+        {% if blogs %}
+        <!-- Blog Area start -->
+        <section class="blog-area pt-130 rpt-100 pb-100 rpb-70 rel z-1" id="blog">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-7">
+                        <div class="section-title text-center mb-55" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
+                            <span class="sub-title mb-20"><i class="fas fa-circle"></i> Blogs & Updates</span>
+                            <h2>Latest Blogs & Updates</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    {% for blog in blogs %}
+                    <div class="col-xl-4 col-md-6">
+                        <div class="blog-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="image">
+                                <img src="{{blog.image.url}}" alt="{{blog.title}}">
+                            </div>
+                            <div class="content">
+                                <ul class="blog-meta">
+                                    <li>
+                                        <a href="#"><i class="fas fa-circle"></i> {{blog.category}}</a>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-calendar-alt"></i>
+                                        <a href="#">{{blog.date}}</a>
+                                    </li>
+                                </ul>
+                                <h5><a href="{{blog.get_absolute_url}}">{{blog.title|truncatechars:50}}</a></h5>
+                                <a href="{{blog.get_absolute_url}}" class="theme-btn style-two">Learn More <i class="far fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
-          <div class="nesmee-portfolio-wrap">
-            <div class="nesmee-portfolio-thumb">
-              <img src="{% static 'web/assets/images/p1/p4.png' %}" alt="">
-              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
-                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
-              </a>
-              <div class="nesmee-portfolio-data">
-                <a href='single-portfolio.html'>
-                  <h4>Marketing Agency Website</h4>
-                </a>
-                <p>Development, Marketing</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-8" data-aos="fade-up" data-aos-duration="700">
-          <div class="nesmee-portfolio-wrap">
-            <div class="nesmee-portfolio-thumb">
-              <img src="{% static 'web/assets/images/p1/p5.png' %}" alt="">
-              <a class='nesmee-portfolio-btn' href='single-portfolio.html'>
-                <span class="p-btn-wraper"><i class="ri-arrow-right-up-line"></i></span>
-              </a>
-              <div class="nesmee-portfolio-data">
-                <a href='single-portfolio.html'>
-                  <h4>Project for Marketing</h4>
-                </a>
-                <p>Marketing, Business</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nesmee-center-btn">
-          <a class='nesmee-default-btn' data-text='View Our All Works' href='portfolio-01.html'><span class="btn-wraper">View Our All Works</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End section -->
-
-  <div class="section nesmee-section-padding bg-light1">
-    <div class="container">
-      <div class="nesmee-section-title center">
-        <h2>Discover Our Cardamom Products</h2>
-      </div>
-      <div class="nesmee-3column-slider2" data-aos="fade-up" data-aos-duration="800">
-
-        <div class="nesmee-service-box">
-            <div class="nesmee-service-thumb">
-              <img src="{% static 'web/assets/images/v3/service1.png' %}" alt="">
-              <div class="nesmee-service-data">
-                <a>
-                  <h5>IT Management</h5>
-                  <p>IT Management</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        <div class="nesmee-service-box">
-            <div class="nesmee-service-thumb">
-              <img src="{% static 'web/assets/images/v3/service1.png' %}" alt="">
-              <div class="nesmee-service-data">
-                <a>
-                  <h5>IT Management</h5>
-                  <p>IT Management</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="nesmee-service-box">
-            <div class="nesmee-service-thumb">
-              <img src="{% static 'web/assets/images/v3/service1.png' %}" alt="">
-              <div class="nesmee-service-data">
-                <a>
-                  <h5>IT Management</h5>
-                  <p>IT Management</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          
-
-      </div>
-    </div>
-  </div>
-  <!-- End section -->
-
-
-  {% if testimonials %}
-  <div class="section nesmee-section-padding bg-light1">
-    <div class="container">
-      <div class="nesmee-section-title center">
-        <h2>Don't take our word, see what our customers say</h2>
-      </div>
-      <div class="nesmee-2column-slider" data-aos="fade-up" data-aos-duration="600">
-        {% for testimonial in testimonials %}
-        <div class="nesmee-t-box">
-          <div class="nesmee-t-quote">
-            <img src="{% static 'web/assets/images/v1/quote.svg' %}" alt="">
-          </div>
-          <div class="nesmee-t-data">
-            <p>“ {{testimonial.message}} ”</p>
-            <div class="nesmee-t-author">
-              <h5>{{testimonial.name }}</h5>
-              <span>{{testimonial.position}}</span>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  {% endif %}
-  <!-- End section -->
-
-  {% if blogs %}
-  <div class="section nesmee-section-padding2">
-    <div class="container">
-      <div class="nesmee-section-title">
-        <div class="row">
-          <div class="col-xxl-5 col-lg-7">
-            <h2>Recent blog & articles</h2>
-          </div>
-          <div class="col-xxl-7 col-lg-5 d-flex align-items-center justify-content-end">
-            <div class="nesmee-title-btn">
-              <a class='nesmee-default-btn' data-text='View All Posts' href='#'><span class="btn-wraper">View All Blogs</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        {% for blog in blogs %}
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="600">
-          <div class="nesmee-blog-wrap">
-            <a href='{{blog.get_absolute_url}}'>
-              <div class="nesmee-blog-thumb">
-                <img src="{{blog.image.url}}" alt="{{blog.title}}">
-              </div>
-            </a>
-            <div class="nesmee-blog-content reduced-padding">
-              <div class="nesmee-blog-meta">
-                <ul>
-                {% if blog.category %}
-                  <li><a href='{{blog.get_absolute_url}}'>{{blog.category}}</a></li>
-                {% endif %}
-                  <li><a href='{{blog.get_absolute_url}}'>{{blog.date}}</a></li>
-                </ul>
-              </div>
-              <a href='{{blog.get_absolute_url}}'>
-                <h4>{{blog.title}}</h4>
-              </a>
-              <a class='nesmee-icon-btn' href='{{blog.get_absolute_url}}'><i class="icon-show ri-arrow-right-line"></i> <span>Learn More</span> <i class="icon-hide ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  {% endif %}
-  <!-- End section -->
-
-
-  {% endblock  %}
+        </section>
+        <!-- Blog Area end -->
+        {% endif %}
+        
+{% endblock %}

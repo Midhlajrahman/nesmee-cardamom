@@ -1,89 +1,58 @@
-@media (min-width: 992px) {
-    .main-slider-area .slick-slide img{
-        display: block;
-        width: 740px;
-        height: 450px;
-        border-radius: 10px;
-        object-fit: cover;
+.s-testimonial-3 .testimonial-thumbs .slider-testimonial-3-thumb{
+    margin-top: 0px !important;
+}
+.s-project{
+    padding-bottom: 180px !important ;
+}
+.modal .content-section{
+    padding: 42px 34px 57px 21px !important;
+}
+.page-title .content .icon-img{
+    margin-bottom: 30px !important;
+}
+.benefit-list .box-icon .style-circle img{
+    height: 40px !important;
+}
+
+@media (min-width: 991px) {
+    .s-our-mission .content-section .slider-wrap {
+        max-width: unset;
+        width: calc(38% - -250px) !important;
     }
-    
-    h1{
+    .page-title-home-1 .swiper-slide-active .slide-home-1 .content .fade-item-4{
+        width: 70% !important;
+    }
+}
+.s-service .icon img{
+ height: 60px !important;
+}
+.header .header-inner .header-left .logo-site img{
+    max-width: 150px !important;
+}
+@media (max-width: 450px) {
+    h1 {
         font-size: 45px !important;
+        line-height: 60px;
     }
-    .gallery-item .image img {
-        border-radius: 10px 10px 0px 0px !important;
+
+    .heading-section .title {
+        font-size: 30px !important;
+        line-height: 50px;
     }
-    .blog-item .image img{
-        height: 250px;
-        width: 100%;
-        border-radius: 5px 5px 0 0;
-        object-fit: cover;
+
+    .s-contact-us .image  {
+        display: none;
     }
-    .menu-btns {
-        display: block !important;
+    .s-project{
+        padding-bottom: 30px !important;
     }
-}
-.blog-item .image img{
-    border-radius: 5px 5px 0 0;
-}
-.main-slider-area .slick-slide img{
-    border-radius: 10px;
-}
-
-.blog-details-image img{
-    height: 400px;
-    object-fit: cover;
-}
-.header-logo img{
-    height: 60px !important;
-}
-.service-item.style-two .icon img{
-    height: 70px !important;
-}
-.service-item.style-two{
-    padding: 20px 20px 20px !important;
-}
-
-.footer-logo img{
-    height: 60px !important;
-}
-.why-choose-us-area .icon img{
-    height: 70px;
-}
-.why-choose-us-area .about-image-two .about-main-image{
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    height: 500px;
-}
-
-.benefit-content .service-item img{
-    height: 50px !important;
-}
-.benefit-image .image img{
-    border-radius: 10px !important;
-}
-.faq-images .image img{
-    border-radius: 10px !important;
-}
-
-.portfolio-gallery-area .menu-sidebar{
-    margin-right: 0px !important;
-}
-.testimonials-image-two img{
-border-radius: 10px !important;
-}
-
-@media(max-width: 991px){
-    .why-choose-us-area .about-image-two .about-main-image{
-        height: 350px !important;
+    .s-contact-us{
+        padding-bottom: 50px !important;
     }
-}
-
-.gallery-item .image img {
-    border-radius: 10px 10px 0px 0px !important;
-}
-
-.gallery-item.style-two .content h5 a {
-    font-size: 20px !important;
+    .footer{
+        padding-top: 0px !important;
+    }
+    .footer .footer-bottom .no-copy{
+        font-size: 15px !important ;
+    }
 }

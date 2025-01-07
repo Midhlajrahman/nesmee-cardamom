@@ -7,6 +7,7 @@ class Banner(models.Model):
     title = models.CharField(max_length=200)
     sub_title = models.CharField(max_length=180)
     image = models.ImageField(upload_to="banner/")
+    description = models.TextField()
 
     def __str__(self):
         return self.title
@@ -64,8 +65,8 @@ class Blog(models.Model):
     slug = models.SlugField()
     category = models.CharField(max_length=100)
     date = models.DateField()
-    description = HTMLField()
     image = models.ImageField(upload_to="blog/")
+    description = HTMLField()
 
     def get_absolute_url(self):
         return reverse_lazy("web:blog_detail", kwargs={"slug": self.slug})
@@ -118,3 +119,16 @@ class Banefit(models.Model):
     class Meta:
         verbose_name = "Banefit"
         verbose_name_plural = "Banefits"
+
+
+class Logo(models.Model):
+    name = models.CharField(max_length=180)
+    image = models.ImageField(upload_to="logs/")
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Logo'
+        verbose_name_plural = 'Logos'
+    

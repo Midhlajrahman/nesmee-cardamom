@@ -1,87 +1,374 @@
 {% load static %}
-<!-- main header -->
-<header class="main-header">
 
-    <div class="header-top-wrap bgc-secondary rel z-1">
-       <div class="container-fluid">
-           <div class="header-top py-5">
-               <div class="row align-items-center">
-                   <div class="col-xl-7">
-                       <div class="top-left text-center text-xl-start">
-                           <ul>
-                                <li><i class="far fa-envelope"></i>Email Us : <a href="mailto:info@nesmee.in"> info@nesmee.in</a></li>
-                                <li><i class="far fa-phone"></i>Call : <a href="callto:+917902855554">+917902855554</a></li>
-                            </ul>
-                       </div>
-                   </div>
-                   <div class="col-xl-5">
-                       <div class="top-right text-center text-xl-end">
-                           <ul>
-                                <li>
-                                    <div class="social-style-one">
-                                        <a href="https://www.facebook.com/profile.php?id=100082724147881" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://x.com/nesmeeofficial"><i class="fab fa-twitter" target="_blank"></i></a>
-                                        <a href="https://www.linkedin.com/in/nesmee-foods-and-exports-7abb50331/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                        <a href="https://www.instagram.com/nesmee.official"><i class="fab fa-instagram" target="_blank" ></i></a>
-                                    </div>
-                                </li>
-                            </ul>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   
-    <!--Header-Upper-->
-    <div class="header-upper">
-        <div class="container-fluid clearfix">
-
-            <div class="header-inner rpy-10 rel d-flex align-items-center">
-                <div class="logo d-flex me-xl-5 header-logo" >
-                    <div class="logo"><a href="{% url "web:index" %}"><img src="{% static 'web/assets/images/logos/logo.webp' %}" alt="Logo" title="Logo"></a></div>
-                </div>
-                
-                {% comment %} <!-- menu sidbar -->
-                <div class="menu-sidebar">
-                    <button class="bg-transparent"></button>
-                </div> {% endcomment %}
-                
-                <div class="nav-outer clearfix me-lg-auto">
-                    <!-- Main Menu -->
-                    <nav class="main-menu navbar-expand-lg">
-                        <div class="navbar-header py-10">
-                            <!-- Toggle Button -->
-                            <button type="button" class="navbar-toggle ms-auto" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.two">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-
-                        <div class="navbar-collapse two collapse clearfix">
-                            <ul class="navigation clearfix">
-                               <li><a href="{% url "web:index" %}">Home</a>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#benefits">Benefits</a></li>
-                                <li><a href="#products">products</a></li>
-                                <li><a href="#why_choose">Why Choose</a></li>
-                                <li><a href="#faq">FAQ</a></li>
-                                <li><a href="#testimonials">Testimonials</a></li>
-                                <li><a href="#blog">Blogs</a></li>
-                            </ul>
-                        </div>
-
-                    </nav>
-                    <!-- Main Menu End-->
-                </div>
-                
-                <!-- Menu Button -->
-                <div class="menu-btns">
-                    <a class="theme-btn menu-sidebar">Get In Touch <i class="far fa-angle-double-right"></i></a>
+ <!-- Top-bar -->
+ <div class="tf-topbar">
+    <div class="tf-container w-1780">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="topbar-inner">
+                    
+                    <div class="topbar-right">
+                        <ul class="contact-list">
+                            <li class="item">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="tel:+917902855554"> +91 7902855554</a>
+                            </li>
+                            <li class="item">
+                                <a href="mailto:info@nesmee.in" class="icon">
+                                    <img src="{%  static 'web/assets/icons/mailbox.png' %}" alt="" />
+                                </a>
+                                <a href="mailto:info@nesmee.in">
+                                    info@nesmee.in
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </a>
+                                <a href="#">
+                                    Shaima Tower,Wandoor, Malappuram, 679 328
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="topbar-right">
+                         <ul class="social-list">
+                            <li class="item">
+                                <a href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <i class="icon-instagram2"></i>
+                                </a>
+                            </li>
+                        </ul> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--End Header Upper-->
+</div><!-- /.Top-bar -->
+
+<!-- Welcome -->
+{% comment %} <dv class="box-welcome">
+    <div class="tf-overlay"></div>
+    <div class="welcome-wrap">
+        <div class="content">
+            <div class="btn-close-welcome icon style-circle">
+                <i class="icon-close"></i>
+            </div>
+            <h3 class="title font-snowfall">
+                DonalFarm Agriculture <br />
+                Farm of laughter and
+                happiness!
+            </h3>
+            <p class="text font-nunito">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Maecenas ex ligula, pulvinar
+                ultrices justo sed.
+            </p>
+            <ul class="infor-list">
+                <li class="item">
+                    <i class="fa-solid fa-location-dot fs-18"></i>
+                    <p>
+                        Prinsengracht 250,
+                        2501016 PM Amsterdam
+                        Netherlands
+                    </p>
+                </li>
+                <li class="item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>
+                        Call us: (234)
+                        109-6666
+                    </p>
+                </li>
+                <li class="item">
+                    <img src="{%  static 'web/assets/icons/mailbox-2.png' %}" alt="" />
+                    <p>
+                        Mail Support:
+                        Donalfarms@gmail.com
+                    </p>
+                </li>
+                <li class="item">
+                    <i class="fa-solid fa-clock"></i>
+                    <p>
+                        Mon - Sat: 8.00am -
+                        18.00pm
+                    </p>
+                </li>
+            </ul>
+            <div class="wg-social">
+                <ul class="list">
+                    <li class="item">
+                        <a href="#"><i class="icon-facebook1"></i></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><i class="icon-twitter"></i></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><i class="icon-instagram2"></i></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><i class="icon-pinterest"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- /.Welcome --> {% endcomment %}
+
+   <!-- Header  -->
+   <header class="header has-item-bot" id="header-main">
+    <div class="tf-container w-1780">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="header-inner">
+                    <div class="header-left">
+                        <div class="logo-site">
+                            <a href="index.html">
+                                <img src="{% static 'web/assets/images/logo/logo.png' %}" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-nav">
+                            <ul class="nav-list">
+                                <li class="item has-child ">
+                                    <a href="{% url "web:index" %}">Home</a>
+                                </li>
+                                <li class="item has-child">
+                                    <a href="#about-section">About</a>
+                                </li>
+                                <li class="item has-child">
+                                    <a href="#expertie-section">Expertise</a>
+                                </li>
+                                <li class="item has-child">
+                                    <a href="#why-choose-section">Why Choose</a>
+                                </li>
+                                <li class="item has-child">  
+                                    <a href="#benefit-section">Benefits</a>
+                                </li>
+                                <li class="item has-child">  
+                                    <a href="#testimonia-section">Testimonials</a>
+                                </li>
+                                <li class="item has-child">
+                                    <a href="#FAQ-section">FAQ</a>
+                                </li>
+                                <li class="item has-child">
+                                    <a href="#blog-section">Blogs</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <a data-bs-toggle="modal" data-bs-target="#EnquiryModal" class="tf-btn gap-30">
+                            <span class="text-style">
+                                Get In Touch!
+                            </span>
+                            <div class="icon">
+                                <i class="icon-arrow_right"></i>
+                            </div>
+                        </a>
+                        
+                        <div class="wg-welcome btn-open-welcome">
+                            <i class="icon-fences-icon fs-24"></i>
+                        </div>
+
+                        <div class="mobile-button">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-nav-wrap">
+                    <div class="overlay-mobile-nav"></div>
+                    <div class="inner-mobile-nav overflow-y-auto">
+                        <div class="top">
+                            <div class="logo">
+                                <a href="index.html" rel="home" class="main-logo">
+                                    <img id="mobile-logo_header" alt="" src="{% static 'web/assets/images/logo/logo-2.png' %}" />
+                                </a>
+                                <div class="mobile-nav-close">
+                                    <i class="icon-close"></i>
+                                </div>
+                            </div>
+                            <nav id="mobile-main-nav" class="mobile-main-nav">
+                                <ul id="menu-mobile-menu" class="menu">
+                                    <li class="menu-item menu-item-has-children-mobile current-nav">
+                                        <a class="item-menu-mobile" href="{% url "web:index" %}">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#about-section">
+                                            About
+                                        </a>
+                                       
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#expertie-section">
+                                            Expertise
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#why-choose-section">
+                                            Why Choose
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#benefit-section">
+                                            Benefits
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#testimonia-section">Testimonials
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#FAQ-section">FAQ
+                                    </li>
+                                    <li class="menu-item menu-item-has-children-mobile">
+                                        <a class="item-menu-mobile" href="#blog-section">Blogs
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="bottom">
+                            <div class="infor-list">
+                                <ul>
+                                    <li>
+                                        <h5 class="title">
+                                            Address:
+                                        </h5>
+                                        <p>
+                                            Prinsengracht 250, Amsterdam Netherlands
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5 class="title">
+                                            Phone:
+                                        </h5>
+                                        <p>
+                                            +1 987 654 3210
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5 class="title">
+                                            Email:
+                                        </h5>
+                                        <p>
+
+                                            Donalfarms@gmail.com
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wg-social">
+                                <ul class="list">
+                                    <li class="item">
+                                        <a href="#"><i class="icon-facebook1"></i></a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#"><i class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#"><i class="icon-instagram2"></i></a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#"><i class="icon-pinterest"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-header style-absolute">
+        <div class="tf-container w-1780">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-inner ">
+                        <div class="header-left">
+                            <div class="logo-site">
+                                <a href="index.html">
+                                    <img src="{% static 'web/assets/images/logo/logo.png' %}" alt="" />
+                                </a>
+                            </div>
+                            <div class="main-nav">
+                                <ul class="nav-list">
+                                    <li class="item has-child">
+                                        <a href="{% url "web:index" %}">Home</a>
+                                       
+                                    </li>
+                                    <li class="item has-child">
+                                        <a href="#about-section">About</a>
+                                    </li>
+                                    <li class="item has-child">
+                                        <a href="#expertie-section">Expertise</a>
+                                    </li>
+                                    <li class="item has-child">
+                                        <a href="#why-choose-section">Why Choose</a>
+                                    </li>
+                                    <li class="item has-child">
+                                        <a href="#benefit-section">Benefits</a>
+                                    </li>
+                                    <li class="item has-child">
+                                        <a href="#testimonia-section">Testimonials</a>
+                                    </li>
+
+                                    <li class="item has-child">
+                                        <a href="#FAQ-section">FAQ</a>
+                                    </li>
+                                    <li class="item has-child">
+                                        <a href="#blog-section">Blogs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <a data-bs-toggle="modal" data-bs-target="#EnquiryModal" class="tf-btn gap-30">
+                                <span class="text-style">
+                                    Get In Touch!
+                                </span>
+                                <div class="icon">
+                                    <i class="icon-arrow_right"></i>
+                                </div>
+                            </a>
+                            
+                            <div class="wg-welcome btn-open-welcome">
+                                <i class="icon-fences-icon fs-24"></i>
+                            </div>
+                            <div class="mobile-button">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header-item children">
+            <img src="{% static 'web/assets/images/item/page-title-top.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="header-item">
+        <img src="{% static 'web/assets/images/item/page-title-top.png' %}" alt="">
+    </div>
 </header>

@@ -28,7 +28,8 @@ class ContactForm(forms.ModelForm):
             ),
             "message": forms.Textarea(
                 attrs={
-                    "class": "form-control required",
+                    "class": "form required",
+                    "id": "message",
                     "rows": 5,
                     "placeholder": "Your Message:",
                 }

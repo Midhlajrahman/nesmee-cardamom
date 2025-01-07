@@ -49,8 +49,8 @@ def pop_contact(request):
                 f"Subject: {data.subject}\n"
                 f"Message: {data.message}\n"
             )
-            from_email = "midhlajrahman26@gmail.com"
-            recipient_list = ["midlajrahman016@gmail.com"]
+            from_email = "info@nesmee.in"
+            recipient_list = ["info@nesmee.in"]
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
 
             whatsapp_message = (
@@ -61,7 +61,7 @@ def pop_contact(request):
                 f"Message: {data.message}\n"
             )
             whatsapp_api_url = "https://api.whatsapp.com/send"
-            phone_number = "+919037126305"
+            phone_number = "+917902855554"
             encoded_message = quote(whatsapp_message)
             whatsapp_url = (
                 f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"

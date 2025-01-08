@@ -452,6 +452,80 @@
                 </div>
             </section><!-- /.Section benefit -->
 
+             <!-- Section service 2-->
+            <section class="s-service-2 relative overflow-hidden">
+                <div class="content-section">
+                    <div class="heading-section style-2">
+                        <div class="img-item">
+                            <div class="item">
+                                <img src="{% static 'web/assets/images/item/rice-plant-2.png' %}" class="tf-animate-1" alt="" />
+                            </div>
+                            <p class="sub-title">
+                                Our Products
+                            </p>
+                        </div>
+
+                        <p class="title tf-animate-1">
+                            Our Premium Cardamom Collection
+                        </p>
+                    </div>
+                    <p class="text">
+                        Discover the finest cardamom, handpicked from sustainable plantations to enhance your recipes with unmatched flavor and promote health naturally.
+                    </p>
+                    <a data-bs-toggle="modal" data-bs-target="#EnquiryModal" class="tf-btn ">
+                        <span class="text-style ">
+                            Know More
+                        </span>
+                        <div class="icon">
+                            <i class="icon-arrow_right"></i>
+                        </div>
+                    </a>
+                    <div class="button-slide-wrap">
+                        <div class="btn-s-service-2 btn-prev">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="58px" height="15px"
+                                viewBox="0 0 80 20" preserveAspectRatio="xMidYMid meet">
+                                <g fill="#0d401c">
+                                    <path
+                                        d="M7 15.4 c-3.6 -2.4 -6.6 -5 -6.8 -5.7 -0.2 -1.2 13.8 -9.7 16 -9.7 2.4 0 0.2 2.4 -4.9 5.2 l-5.8 3.3 19.5 0.8 c11 0.5 27.1 0.5 37 -0.1 9.6 -0.5 17.7 -0.7 17.9 -0.5 2.4 1.9 -22 3.5 -48.6 3.1 l-25.2 -0.3 4.7 4.2 c6.1 5.5 4.4 5.3 -3.8 -0.3z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="btn-s-service-2 btn-next">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="58px" height="15px"
+                                viewBox="0 0 80 20" preserveAspectRatio="xMidYMid meet">
+                                <g fill="#0d401c">
+                                    <path
+                                        d="M63 19 c0 -0.5 2.6 -2.4 5.8 -4.2 l5.7 -3.3 -19.5 -0.8 c-11 -0.5 -27.1 -0.5 -37 0.1 -9.6 0.5 -17.7 0.7 -17.9 0.5 -2.4 -1.9 22 -3.5 48.7 -3.1 l25.2 0.3 -4.6 -3.9 c-2.5 -2.1 -4.3 -4 -4 -4.3 0.7 -0.7 14.6 8.9 14.6 10.2 0 1.1 -14.3 9.5 -16.2 9.5 -0.4 0 -0.8 -0.4 -0.8 -1z" />
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-wrap">
+                    <div class="swiper-container slider-s-service-2">
+                        <div class="swiper-wrapper">
+                            {% for product in products %}
+                            <div class="swiper-slide">
+                                <div class="box-infor style-2 ic-hover img-hover">
+                                    <div class="image hover-icon hover-item">
+                                        <img src="{{product.image.url}}"
+                                            data-src="{{product.image.url}}" alt="{{product.title}}" class=" lazyload">
+                                    </div>
+                                    <div class="content">
+                                        <a data-bs-toggle="modal" data-bs-target="#EnquiryModal"
+                                            class="title fs-23 fw-6 font-worksans hover-text-secondary">
+                                           {{product.title}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section><!-- /.Section service -->
+
             <!-- Section testimonial 3 -->
             <section class="s-testimonial-3 overflow-hidden" id="testimonia-section">
                 <div class="tf-container w-1290">

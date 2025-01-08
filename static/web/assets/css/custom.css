@@ -56,3 +56,15 @@
         font-size: 15px !important ;
     }
 }
+
+.box-infor.style-2 .content {
+    padding: 23px 27px 11px 34px !important;
+}
+
+.box-infor.style-2 .content .title{
+    line-height: 35px !important; 
+}
+
+.s-service-2 {
+    padding: 123px 0px 0px !important;
+}

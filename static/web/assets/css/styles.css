@@ -12260,7 +12260,7 @@ i.fs-12 {
   display: flex;
   justify-content: center;
   padding: 123px 0px 120px;
-  background-image: url("../images/section/bg-s-service-2.png");
+  /* background-image: url("../images/section/bg-s-service-2.png"); */
   margin-top: -30px;
   background-size: cover;
   background-repeat: no-repeat;

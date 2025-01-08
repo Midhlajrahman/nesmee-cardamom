@@ -5,7 +5,7 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 
 from web.forms import ContactForm
-from web.models import Banefit, Banner, Blog, Product, Testimonial, FAQ, Logo
+from web.models import Banner, Blog, Product, Testimonial, FAQ, Logo
 
 
 def index(request):
@@ -13,7 +13,6 @@ def index(request):
     blogs = Blog.objects.all()
     banners = Banner.objects.all()
     products = Product.objects.all()
-    benefits = Banefit.objects.all()
     faqs = FAQ.objects.all()
     logos = Logo.objects.all()
     context = {
@@ -22,7 +21,6 @@ def index(request):
         "blogs": blogs,
         "banners": banners,
         "products": products,
-        "benefits": benefits,
         "faqs":faqs,
         "logos":logos,
     }

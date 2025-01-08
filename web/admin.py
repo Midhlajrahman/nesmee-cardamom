@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from web.models import FAQ, Banefit, Banner, Blog, Contact, Meta, Product, Testimonial
+from web.models import FAQ, Banner, Blog, Contact, Product, Testimonial
 
 # Register your models here.
 
@@ -21,9 +21,9 @@ class FAQAdmin(admin.ModelAdmin):
     list_display = ("question",)
 
 
-@admin.register(Meta)
-class MetaAdmin(admin.ModelAdmin):
-    list_display = ("meta_title", "page")
+# @admin.register(Meta)
+# class MetaAdmin(admin.ModelAdmin):
+#     list_display = ("meta_title", "page")
 
 
 @admin.register(Banner)
@@ -38,9 +38,4 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("title",)
-
-
-@admin.register(Banefit)
-class BenefitAdmin(admin.ModelAdmin):
     list_display = ("title",)

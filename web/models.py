@@ -108,19 +108,6 @@ class Product(models.Model):
         verbose_name_plural = "Products"
 
 
-class Banefit(models.Model):
-    icon = models.ImageField(upload_to="banefit/")
-    title = models.CharField(max_length=100)
-    description = models.CharField(max_length=180)
-
-    def str(self):
-        return self.title
-
-    class Meta:
-        verbose_name = "Banefit"
-        verbose_name_plural = "Banefits"
-
-
 class Logo(models.Model):
     name = models.CharField(max_length=180)
     image = models.ImageField(upload_to="logs/")

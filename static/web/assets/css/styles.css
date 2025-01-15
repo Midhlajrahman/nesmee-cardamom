@@ -1,10 +1,5 @@
 @charset "UTF-8";
 /* ---------------------------------------------------------
-    * Name: 
-    * Version: 1.0.0
-    * Author: Themesflat
-    * Author URI: http://themesflat.com 
-
 	* Abstracts variable
 
     * Reset css styles
@@ -26,8 +21,8 @@
   --Black: #000000;
   --White: #ffffff;
   --body-text: #6e7673;
-  --Primary: #0d401c;
-  --Secondary: #f8c32c;
+  --Primary: #679E29;
+  --Secondary: #F5FDD6;
   --Third: #8a9b8e;
   --Text: #6e7673;
   --Text-2: #072010;

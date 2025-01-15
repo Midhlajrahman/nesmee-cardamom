@@ -142,7 +142,7 @@
                 <div class="header-inner">
                     <div class="header-left">
                         <div class="logo-site">
-                            <a href="index.html">
+                            <a href="{% url "web:index" %}">
                                 <img src="{% static 'web/assets/images/logo/logo.png' %}" alt="" />
                             </a>
                         </div>
@@ -204,7 +204,7 @@
                     <div class="inner-mobile-nav overflow-y-auto">
                         <div class="top">
                             <div class="logo">
-                                <a href="index.html" rel="home" class="main-logo">
+                                <a href="{% url "web:index" %}" rel="home" class="main-logo">
                                     <img id="mobile-logo_header" alt="" src="{% static 'web/assets/images/logo/logo-2.png' %}" />
                                 </a>
                                 <div class="mobile-nav-close">
@@ -314,7 +314,7 @@
                     <div class="header-inner ">
                         <div class="header-left">
                             <div class="logo-site">
-                                <a href="index.html">
+                                <a href="{% url "web:index" %}">
                                     <img src="{% static 'web/assets/images/logo/logo.png' %}" alt="" />
                                 </a>
                             </div>

@@ -68,3 +68,33 @@
 .s-service-2 {
     padding: 123px 0px 0px !important;
 }
+.s-benefit .benefit-list::after {
+    background: linear-gradient(to top, #679E29, #6bb226) !important;
+}
+.s-faq .s-right .content{
+    background-color: var(--Primary);
+}
+.tf-topbar .topbar-inner .topbar-right .social-list{
+    border: 1px solid white;
+}
+.s-counter{
+    background-color: var(--Primary) !important;
+}
+.s-why-us .bot .benefit-list{
+    background-color: var(--Primary) !important;
+}
+.s-counter.has-img-item{
+    margin-top: 0px !important;
+}
+.s-project .slider-side{
+    background-color: var(--Primary) !important;
+}
+.wg-welcome{
+    display: none !important
+}
+.s-our-mission .content-section .slider-wrap .content p {
+    color: black !important;
+}
+.s-contact-us .contact-list li .icon{
+    background-color: black !important;
+}

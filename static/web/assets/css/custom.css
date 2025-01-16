@@ -76,6 +76,14 @@
 }
 .tf-topbar .topbar-inner .topbar-right .social-list{
     border: 1px solid white;
+    background-color: #679e29;
+
+}
+.tf-topbar .topbar-inner .topbar-right .social-list a{
+    color: rgb(255, 255, 255);
+}
+.tf-topbar .topbar-inner .topbar-right .social-list a:hover{
+    color: rgb(0, 0, 0);
 }
 .s-counter{
     background-color: var(--Primary) !important;
@@ -96,5 +104,5 @@
     color: black !important;
 }
 .s-contact-us .contact-list li .icon{
-    background-color: black !important;
+    background-color: #679e29 !important;
 }
